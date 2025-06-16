@@ -1,0 +1,107 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 207 43% 95%; /* #F0F4F7 */
+    --foreground: 210 10% 23%; /* Dark Gray for readability */
+
+    --card: 207 43% 95%; /* Consistent with background for a flatter design */
+    --card-foreground: 210 10% 23%;
+
+    --popover: 207 43% 95%;
+    --popover-foreground: 210 10% 23%;
+
+    --primary: 195 47% 64%; /* #72BCD4 */
+    --primary-foreground: 210 40% 98%; /* White/very light for contrast on primary */
+
+    --secondary: 207 30% 88%; /* Lighter shade for secondary elements */
+    --secondary-foreground: 210 10% 23%;
+
+    --muted: 207 30% 80%;
+    --muted-foreground: 210 10% 45%;
+
+    --accent: 122 39% 49%; /* #4CAF50 */
+    --accent-foreground: 0 0% 100%; /* White for contrast on accent */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 195 20% 80%; /* Adjusted border to complement primary */
+    --input: 195 20% 85%; /* Adjusted input to complement primary */
+    --ring: 195 47% 58%; /* Ring color related to primary */
+
+    --chart-1: 195 47% 64%;
+    --chart-2: 122 39% 49%;
+    --chart-3: 210 30% 50%;
+    --chart-4: 30 80% 65%;
+    --chart-5: 280 70% 60%;
+    
+    --radius: 0.5rem;
+
+    /* Sidebar specific colors - can be same as main theme or distinct */
+    --sidebar-background: 207 35% 90%; /* Slightly different from main background for visual separation */
+    --sidebar-foreground: 210 10% 23%;
+    --sidebar-primary: 195 47% 64%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 195 47% 70%; /* Lighter accent for sidebar hover states */
+    --sidebar-accent-foreground: 210 10% 15%;
+    --sidebar-border: 195 20% 75%;
+    --sidebar-ring: 195 47% 58%;
+  }
+
+  .dark {
+    /* For dark mode, we'll invert and adjust. Keeping it simple for now. */
+    --background: 210 10% 15%;
+    --foreground: 207 43% 95%;
+
+    --card: 210 10% 15%;
+    --card-foreground: 207 43% 95%;
+
+    --popover: 210 10% 15%;
+    --popover-foreground: 207 43% 95%;
+
+    --primary: 195 47% 64%;
+    --primary-foreground: 210 10% 5%;
+
+    --secondary: 210 10% 25%;
+    --secondary-foreground: 207 43% 95%;
+
+    --muted: 210 10% 30%;
+    --muted-foreground: 207 43% 70%;
+
+    --accent: 122 39% 49%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 195 20% 30%;
+    --input: 195 20% 35%;
+    --ring: 195 47% 58%;
+
+    --sidebar-background: 210 10% 12%;
+    --sidebar-foreground: 207 43% 95%;
+    --sidebar-primary: 195 47% 64%;
+    --sidebar-primary-foreground: 210 10% 5%;
+    --sidebar-accent: 195 47% 25%;
+    --sidebar-accent-foreground: 207 43% 98%;
+    --sidebar-border: 195 20% 25%;
+    --sidebar-ring: 195 47% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
