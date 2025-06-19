@@ -233,8 +233,8 @@ export function ResearchStudentManagement() {
       const startDateTimestamp = Timestamp.fromDate(new Date(editStudentDate));
 
       const updatedStudentData = {
-        studentName: editStudentName, 
-        studentEmail: editStudentEmail, 
+        studentName: editStudentName, // Changed from name
+        studentEmail: editStudentEmail, // Changed from email
         researchTopic: editStudentTopic,
         startDate: startDateTimestamp, 
       };

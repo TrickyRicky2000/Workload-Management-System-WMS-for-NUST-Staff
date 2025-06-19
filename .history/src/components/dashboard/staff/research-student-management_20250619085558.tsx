@@ -234,7 +234,7 @@ export function ResearchStudentManagement() {
 
       const updatedStudentData = {
         studentName: editStudentName, 
-        studentEmail: editStudentEmail, 
+        studentEmail: editStudentEmail, // Changed from email
         researchTopic: editStudentTopic,
         startDate: startDateTimestamp, 
       };

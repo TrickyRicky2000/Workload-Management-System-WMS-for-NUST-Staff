@@ -213,7 +213,7 @@ export function ResearchStudentManagement() {
   const openEditModal = (student: ResearchStudent) => {
     setEditingStudent(student);
     setEditStudentName(student.studentName); 
-    setEditStudentEmail(student.studentEmail); 
+    setEditStudentEmail(student.studentEmail); // Changed from email
     setEditStudentTopic(student.researchTopic);
     setEditStudentDate(formatDateForInput(student.startDate)); 
     setIsEditDialogOpen(true);
@@ -233,8 +233,8 @@ export function ResearchStudentManagement() {
       const startDateTimestamp = Timestamp.fromDate(new Date(editStudentDate));
 
       const updatedStudentData = {
-        studentName: editStudentName, 
-        studentEmail: editStudentEmail, 
+        studentName: editStudentName, // Changed from name
+        studentEmail: editStudentEmail, // Changed from email
         researchTopic: editStudentTopic,
         startDate: startDateTimestamp, 
       };

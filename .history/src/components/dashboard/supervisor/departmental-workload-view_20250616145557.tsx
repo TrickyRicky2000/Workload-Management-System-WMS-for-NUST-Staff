@@ -185,7 +185,7 @@ export function DepartmentalWorkloadView() {
     // amendmentComment state is for the general "request amendment" dialog
     setAmendmentComment(selectedWorkload.supervisorComment || ""); 
     setIsAmendmentDialogOpen(true);
-   
+    // Note: supervisorCertification and supervisorCertificationComment are handled in the main details dialog for approval
   };
 
   const handleRequestAmendmentSubmit = async () => {

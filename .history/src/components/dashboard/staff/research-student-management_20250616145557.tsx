@@ -113,8 +113,8 @@ export function ResearchStudentManagement() {
             id: docSnap.id,
             supervisorId: data.supervisorId,
             supervisorName: data.supervisorName,
-            studentName: data.studentName, 
-            studentEmail: data.studentEmail, 
+            studentName: data.studentName, // Changed from name
+            studentEmail: data.studentEmail, // Changed from email
             researchTopic: data.researchTopic,
             startDate: data.startDate, 
             status: data.status,
@@ -161,8 +161,8 @@ export function ResearchStudentManagement() {
       const newStudentData = {
         supervisorId: staffUser.uid,
         supervisorName: staffUser.name || staffUser.displayName || staffUser.email?.split('@')[0] || "Supervisor",
-        studentName: newStudentName, 
-        studentEmail: newStudentEmail, 
+        studentName: newStudentName, // Changed from name
+        studentEmail: newStudentEmail, // Changed from email
         researchTopic: newStudentTopic,
         startDate: startDateTimestamp, 
         status: "Active",
@@ -212,8 +212,8 @@ export function ResearchStudentManagement() {
 
   const openEditModal = (student: ResearchStudent) => {
     setEditingStudent(student);
-    setEditStudentName(student.studentName); 
-    setEditStudentEmail(student.studentEmail); 
+    setEditStudentName(student.studentName); // Changed from name
+    setEditStudentEmail(student.studentEmail); // Changed from email
     setEditStudentTopic(student.researchTopic);
     setEditStudentDate(formatDateForInput(student.startDate)); 
     setIsEditDialogOpen(true);
@@ -233,8 +233,8 @@ export function ResearchStudentManagement() {
       const startDateTimestamp = Timestamp.fromDate(new Date(editStudentDate));
 
       const updatedStudentData = {
-        studentName: editStudentName, 
-        studentEmail: editStudentEmail, 
+        studentName: editStudentName, // Changed from name
+        studentEmail: editStudentEmail, // Changed from email
         researchTopic: editStudentTopic,
         startDate: startDateTimestamp, 
       };

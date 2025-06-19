@@ -48,7 +48,8 @@ export default function DashboardRedirectPage() {
     );
   }
 
-  
+  // This state should ideally be brief as the useEffect handles redirection.
+  // If user exists and role is being determined, show a generic loading message.
   return (
     <div className="flex min-h-screen items-center justify-center bg-background">
       <Loader2 className="h-12 w-12 animate-spin text-primary" />
